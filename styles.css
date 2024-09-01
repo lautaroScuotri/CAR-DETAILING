@@ -1,3 +1,77 @@
+.flexBasico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.card-body {
+  width: 90%;
+  margin: 0 auto;
+  border: 2px;
+}
+
+* {
+  font-family: "Oswald", sans-serif;
+}
+
+.headerIndex {
+  background-image: url(../images/myRaptor.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 95vh;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+.flexBasico {
+  flex-direction: column;
+}
+
+.botonheader {
+  border: none;
+  width: 8rem;
+  padding: 0.4rem 1rem;
+  margin: 0.4rem 1rem;
+}
+
+.botonheader {
+  transition: transform;
+}
+.botonheader:hover {
+  transform: scale(1.5);
+}
+
+.card-body {
+  margin: 1rem;
+  max-width: 23rem;
+  padding: 1rem;
+}
+
+.card-body h3 {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 600px) {
+  .card-body {
+    grid-column: 1/3;
+    max-width: unset;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .contenedorGrid {
+    gird-template-columns: repeat(3, 1fr);
+  }
+  .card-body {
+    grid-column: unset;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

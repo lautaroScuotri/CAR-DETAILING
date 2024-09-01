@@ -1,0 +1,28 @@
+$medidas: 600px,800px;
+
+@each $medida in $medidas{
+    @media only screen and (min-width: $medida){
+        .contenedorGrid{
+            @if $medida == 6oopx{
+                display:grid;
+                gird-template-columns:repeat(2,1fr);
+                row-gap: 1rem;
+                width: 90%;
+                margin: 0 auto;               
+            }
+            @else if $medida ==800px{
+                gird-template-columns:repeat(3,1fr);
+            }
+        }
+       .card-body{
+        @if $medida == 600px{
+            grid-column: 1/3;
+            max-width: unset;
+        }
+        @else if $medida == 800px{
+            grid-column: unset;
+        }
+       }
+
+    }
+}
