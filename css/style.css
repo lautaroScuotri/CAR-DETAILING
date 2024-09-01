@@ -67,7 +67,7 @@
 }
 @media only screen and (min-width: 800px) {
   .contenedorGrid {
-    gird-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .card-body {
     grid-column: unset;
