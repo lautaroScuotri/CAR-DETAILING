@@ -39,19 +39,19 @@
   width: 8rem;
   padding: 0.4rem 1rem;
   margin: 0.4rem 1rem;
+  transition: transform 0.3s ease;
 }
 
-.botonheader {
-  transition: transform;
-}
 .botonheader:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 
 .card-body {
-  margin: 1rem;
+  width: 90%;
+  margin: 0 auto;
   max-width: 23rem;
   padding: 1rem;
+  border: 2px solid;
 }
 
 .card-body h3 {
@@ -61,17 +61,32 @@
 
 @media only screen and (min-width: 600px) {
   .card-body {
-    grid-column: 1/3;
+    grid-column: 1 / 3; /* Asegúrate de que esto esté alineado con tu diseño */
     max-width: unset;
   }
 }
+
 @media only screen and (min-width: 800px) {
   .contenedorGrid {
-    gird-template-columns: repeat(3, 1fr);
+    display: grid; /* Asegúrate de que el contenedor tenga display: grid */
+    grid-template-columns: repeat(3, 1fr);
   }
+  
   .card-body {
     grid-column: unset;
   }
 }
+:root {
+  --form-bg-color: rgba(248, 10, 10, 0.5);
+  --form-border-color: #ccc;
+}
 
+.form-registro {
+  background-color: var(--form-bg-color);
+  opacity: 0.8;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--form-border-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 /*# sourceMappingURL=styles.css.map */
